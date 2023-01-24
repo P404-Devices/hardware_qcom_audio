@@ -85,20 +85,6 @@ PRODUCT_PACKAGES += $(AUDIO_HARDWARE)
 PRODUCT_PACKAGES += $(AUDIO_WRAPPER)
 PRODUCT_PACKAGES += $(AUDIO_HAL_TEST_APPS)
 
-BOARD_VENDOR_KERNEL_MODULES := \
-    $(KERNEL_MODULES_OUT)/qca_cld3_wlan.ko \
-    $(KERNEL_MODULES_OUT)/wcd-core.ko \
-    $(KERNEL_MODULES_OUT)/pinctrl-wcd.ko \
-    $(KERNEL_MODULES_OUT)/swr-wcd-ctrl.ko \
-    $(KERNEL_MODULES_OUT)/snd-soc-wcd9xxx.ko \
-    $(KERNEL_MODULES_OUT)/wcd-dsp-glink.ko \
-    $(KERNEL_MODULES_OUT)/snd-soc-wcd934x.ko \
-    $(KERNEL_MODULES_OUT)/snd-soc-wcd-mbhc.ko \
-    $(KERNEL_MODULES_OUT)/snd-soc-wsa881x.ko \
-    $(KERNEL_MODULES_OUT)/snd-soc-sdm845.ko \
-    $(KERNEL_MODULES_OUT)/snd-soc-wcd-spi.ko \
-    $(KERNEL_MODULES_OUT)/llcc_perfmon.ko
-
 ifneq ($(strip $(TARGET_USES_RRO)), true)
 #Audio Specific device overlays
 DEVICE_PACKAGE_OVERLAYS += vendor/qcom/opensource/audio-hal/primary-hal/configs/common/overlay
